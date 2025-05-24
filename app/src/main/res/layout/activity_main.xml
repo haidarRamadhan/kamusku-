@@ -10,7 +10,7 @@
     android:background="@color/white">
 
     <FrameLayout
-        android:id="@+id/topFrame"
+        android:id="@+id/mainFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
