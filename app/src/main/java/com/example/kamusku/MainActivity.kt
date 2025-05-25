@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding.menu1.setOnClickListener {
             openFragment1()
         }
+        binding.menu2.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.mainFrame, fragment_en_id())
+                .addToBackStack(null).commit()
+        }
 
 
 
@@ -32,4 +36,5 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.mainFrame, id_en())
            .addToBackStack(null).commit()
     }
+
     }
