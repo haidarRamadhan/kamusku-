@@ -2,4 +2,9 @@
     <string name="app_name">Kamusku+</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="id_to_en"></string>
+    <string name="id_en">id to en</string>
+    <string name="add">Id to En</string>
+    <string name="text_ind">Indonesian</string>
+    <string name="text_eng">English</string>
 </resources>
