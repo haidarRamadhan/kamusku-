@@ -23,6 +23,15 @@ class add : Fragment() {
             // menampilkan fragment
         }
 
+        // Ketika tombol ID->EN ditekan
+        binding.fabAddId.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.mainFrame, FragmentAddInd())
+                .addToBackStack(null)
+                .commit()
+        }
+
+
         return binding.root
     }
 

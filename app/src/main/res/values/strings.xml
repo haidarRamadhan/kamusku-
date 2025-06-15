@@ -7,4 +7,6 @@
     <string name="add">Id to En</string>
     <string name="text_ind">Indonesian</string>
     <string name="text_eng">English</string>
+    <string name="button_simpan">Simpan</string>
+    <string name="button_batal">Batal</string>
 </resources>

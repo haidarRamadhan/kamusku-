@@ -6,46 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".add">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frm_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/frm_context"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <!-- Tombol ID -> EN -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
             <ImageButton
                 android:id="@+id/fab_add_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="@string/id_to_en"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:contentDescription="ID to EN"
                 app:srcCompat="@drawable/baseline_translate_24"
-
                 android:minHeight="48dp"
-                android:minWidth="48dp"/>
+                android:minWidth="48dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID → EN"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Tombol EN -> ID -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
             <ImageButton
                 android:id="@+id/fab_add_eng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="@string/id_to_en"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="EN to ID"
                 app:srcCompat="@drawable/baseline_translate_24"
-
                 android:minHeight="48dp"
-                android:minWidth="48dp"/>
+                android:minWidth="48dp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EN → ID"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
