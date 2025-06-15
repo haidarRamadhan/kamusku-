@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.backend.wasm.ir2wasm.bind
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -33,6 +35,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    //aktifkan view binding
     buildFeatures {
         viewBinding = true
     }

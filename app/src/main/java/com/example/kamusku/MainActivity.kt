@@ -3,33 +3,30 @@ package com.example.kamusku
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.kamusku.databinding.ActivityMainBinding
+import com.example.kamusku.add
+import com.example.kamusku.FragmentAddInd
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-// Layout inflater untuk merubah file XML agar bisa ditampilkan di layar
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.menu1.performClick()
-
-        binding.menu1.setOnClickListener {
-            openFragment1()
-        }
+        // Default fragment ditampilkan pertama kali
+        openViewFragment()
 
 
-
-        }
-
-    // fungsi untuk menu_1
-    // Note : Letakkan di luar on create
-    fun openFragment1(){
-        supportFragmentManager.beginTransaction().replace(R.id.mainFrame, id_en())
-           .addToBackStack(null).commit()
     }
+
+    fun openViewFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.mainFrame, add()) // default fragment pertama
+            .commit()
     }
+}
