@@ -1,5 +1,6 @@
 package com.example.kamusku
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,15 @@ class FragmentAddInd : Fragment() {
         val indo = view.findViewById<EditText>(R.id.txt_npm)
         val eng = view.findViewById<EditText>(R.id.txt_nama)
         val btnSimpan = view.findViewById<Button>(R.id.btn_simpan)
+
+        // Warna teks dan hint jadi hitam pekat
+        indo.setTextColor(Color.BLACK)
+        indo.setHintTextColor(Color.BLACK)
+
+        eng.setTextColor(Color.BLACK)
+        eng.setHintTextColor(Color.BLACK)
+
+        btnSimpan.setTextColor(Color.BLACK)
 
         btnSimpan.setOnClickListener {
             val db = Lite(requireContext()).writableDatabase
