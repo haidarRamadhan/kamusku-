@@ -1,13 +1,16 @@
 package com.example.kamusku
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.kamusku.config.Lite
+import com.google.android.material.snackbar.Snackbar
 
 class FragmentViewIdEn : Fragment() {
 
@@ -43,8 +46,26 @@ class FragmentViewIdEn : Fragment() {
                         textAlignment = View.TEXT_ALIGNMENT_VIEW_END
                     }
 
+                    val btnDelete = ImageButton(requireContext()).apply {
+                        setImageResource(android.R.drawable.ic_menu_delete)
+                        setBackgroundColor(Color.TRANSPARENT)
+                        layoutParams = LinearLayout.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                    }
+
+                    btnDelete.setOnClickListener {
+                        val dbDel = Lite(requireContext()).writableDatabase
+                        dbDel.execSQL("DELETE FROM tb_kalimat WHERE indo = ? AND eng = ?", arrayOf(indo, eng))
+                        dbDel.close()
+                        listContainer.removeView(this)
+                        Snackbar.make(requireView(), "Data dihapus", Snackbar.LENGTH_SHORT).show()
+                    }
+
                     addView(tvIndo)
                     addView(tvEng)
+                    addView(btnDelete)
                 }
 
                 listContainer.addView(itemLayout)
