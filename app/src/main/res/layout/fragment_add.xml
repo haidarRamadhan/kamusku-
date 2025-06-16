@@ -4,72 +4,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".add">
+    tools:context=".add"
+    android:background="#FAFAFA">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frm_context"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:layout_height="match_parent"
+        android:padding="24dp">
 
-        <!-- Tombol ID -> EN -->
         <LinearLayout
+            android:id="@+id/btn_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <ImageButton
-                android:id="@+id/fab_add_id"
+            <!-- Tombol ID → EN -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="ID to EN"
-                app:srcCompat="@drawable/baseline_translate_24"
-                android:minHeight="48dp"
-                android:minWidth="48dp" />
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="32dp">
 
-            <TextView
+                <ImageButton
+                    android:id="@+id/fab_add_id"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_round_button"
+                    android:padding="12dp"
+                    android:contentDescription="ID to EN"
+                    app:srcCompat="@drawable/baseline_translate_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID → EN"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Tombol Lihat Data ID-EN -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID → EN"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginTop="4dp"/>
-        </LinearLayout>
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-        <!-- Tombol EN -> ID -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp">
+                <ImageButton
+                    android:id="@+id/btn_view_id_en"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@drawable/bg_round_button"
+                    android:padding="12dp"
+                    android:contentDescription="Lihat Data ID-EN"
+                    app:srcCompat="@android:drawable/ic_menu_view" />
 
-            <ImageButton
-                android:id="@+id/fab_add_eng"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="EN to ID"
-                app:srcCompat="@drawable/baseline_translate_24"
-                android:minHeight="48dp"
-                android:minWidth="48dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="EN → ID"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginTop="4dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lihat ID → EN"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

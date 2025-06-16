@@ -19,14 +19,18 @@ class add : Fragment() {
     ): View? {
         binding = FragmentAddBinding.inflate(layoutInflater)
 
-        binding.fabAddId.setOnClickListener {
-            // menampilkan fragment
-        }
+
 
         // Ketika tombol ID->EN ditekan
         binding.fabAddId.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.mainFrame, FragmentAddInd())
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.btnViewIdEn.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.mainFrame, FragmentViewIdEn())
                 .addToBackStack(null)
                 .commit()
         }
