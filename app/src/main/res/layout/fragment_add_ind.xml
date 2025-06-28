@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="24dp">
+        android:padding="25dp">
 
         <!-- Title -->
         <TextView
@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Form Tambah Terjemahan"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="#000000"
@@ -32,7 +32,7 @@
             android:id="@+id/cardForm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             app:cardElevation="4dp"
             app:cardCornerRadius="12dp"
             app:layout_constraintTop_toBottomOf="@id/textView"
@@ -95,8 +95,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:text="Tambah"
+                android:layout_weight="3"
+                android:text="Tambah Terjemahan"
                 android:textColor="#FFFFFF"
                 android:background="#D32F2F" />
 
@@ -105,7 +105,7 @@
                 android:id="@+id/btn_batal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:text="Hapus"
                 android:textColor="#000000"
