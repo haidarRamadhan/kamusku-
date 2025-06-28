@@ -39,7 +39,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/bg_round_button"
                     android:backgroundTint="#00FFAB"
-                    android:padding="12dp"
+                    android:padding="20dp"
                     android:contentDescription="ID to EN"
                     app:srcCompat="@drawable/baseline_translate_24"
                     android:tint="#FFFFFF" />
