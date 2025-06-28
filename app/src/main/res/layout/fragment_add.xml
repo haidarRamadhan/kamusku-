@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".add"
-    android:background="#FAFAFA">
+    android:background="#121212"> <!-- Gelap modern -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frm_context"
@@ -32,14 +32,17 @@
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="32dp">
 
+                <!-- Tombol hijau neon -->
                 <ImageButton
                     android:id="@+id/fab_add_id"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/bg_round_button"
+                    android:backgroundTint="#00FFAB"
                     android:padding="12dp"
                     android:contentDescription="ID to EN"
-                    app:srcCompat="@drawable/baseline_translate_24" />
+                    app:srcCompat="@drawable/baseline_translate_24"
+                    android:tint="#FFFFFF" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -47,8 +50,8 @@
                     android:text="ID → EN"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="#212121"
-                    android:layout_marginTop="8dp"/>
+                    android:textColor="#00FFAB"
+                    android:layout_marginTop="8dp" />
             </LinearLayout>
 
             <!-- Tombol Lihat Data ID-EN -->
@@ -58,14 +61,17 @@
                 android:orientation="vertical"
                 android:gravity="center_horizontal">
 
+                <!-- Tombol pink neon -->
                 <ImageButton
                     android:id="@+id/btn_view_id_en"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/bg_round_button"
+                    android:backgroundTint="#FF00FF"
                     android:padding="12dp"
                     android:contentDescription="Lihat Data ID-EN"
-                    app:srcCompat="@android:drawable/ic_menu_view" />
+                    app:srcCompat="@android:drawable/ic_menu_view"
+                    android:tint="#FFFFFF" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -73,8 +79,8 @@
                     android:text="Lihat ID → EN"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:textColor="#212121"
-                    android:layout_marginTop="8dp"/>
+                    android:textColor="#FF00FF"
+                    android:layout_marginTop="8dp" />
             </LinearLayout>
         </LinearLayout>
 
