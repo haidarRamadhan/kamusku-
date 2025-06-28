@@ -22,6 +22,7 @@ class FragmentAddInd : Fragment() {
         val indo = view.findViewById<EditText>(R.id.txt_npm)
         val eng = view.findViewById<EditText>(R.id.txt_nama)
         val btnSimpan = view.findViewById<Button>(R.id.btn_simpan)
+        val btnBatal = view.findViewById<Button>(R.id.btn_batal)
 
         // Warna teks dan hint jadi hitam pekat
         indo.setTextColor(Color.BLACK)
@@ -31,7 +32,9 @@ class FragmentAddInd : Fragment() {
         eng.setHintTextColor(Color.BLACK)
 
         btnSimpan.setTextColor(Color.BLACK)
+        btnBatal.setTextColor(Color.BLACK)
 
+        // Logika tombol Simpan
         btnSimpan.setOnClickListener {
             val db = Lite(requireContext()).writableDatabase
             val stmt = db.compileStatement("INSERT INTO tb_kalimat (indo, eng) VALUES (?, ?)")
@@ -42,6 +45,13 @@ class FragmentAddInd : Fragment() {
             Toast.makeText(requireContext(), "Berhasil disimpan", Toast.LENGTH_SHORT).show()
             indo.text.clear()
             eng.text.clear()
+        }
+
+        // Logika tombol Batal
+        btnBatal.setOnClickListener {
+            indo.text.clear()
+            eng.text.clear()
+            Toast.makeText(requireContext(), "Input dibersihkan", Toast.LENGTH_SHORT).show()
         }
 
         return view
