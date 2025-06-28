@@ -11,7 +11,7 @@
         android:id="@+id/frm_context"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="24dp">
+        android:padding="25dp">
 
         <LinearLayout
             android:id="@+id/btn_container"
@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="32dp">
+                android:layout_marginBottom="35dp">
 
                 <!-- Tombol hijau neon -->
                 <ImageButton
@@ -39,7 +39,7 @@
                     android:layout_height="64dp"
                     android:background="@drawable/bg_round_button"
                     android:backgroundTint="#00FFAB"
-                    android:padding="12dp"
+                    android:padding="20dp"
                     android:contentDescription="ID to EN"
                     app:srcCompat="@drawable/baseline_translate_24"
                     android:tint="#FFFFFF" />
@@ -77,10 +77,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Lihat terjemahan kamus"
-                    android:textSize="14sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="#FF00FF"
-                    android:layout_marginTop="8dp" />
+                    android:layout_marginTop="10dp" />
             </LinearLayout>
         </LinearLayout>
 
