@@ -17,7 +17,7 @@
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Form Tambah Data"
+            android:text="Form Tambah Terjemahan"
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center"
